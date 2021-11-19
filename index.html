@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dots game</title>
+  <link rel="stylesheet" href="recursos/normalize.css">
+  <link rel="stylesheet" href="recursos/style.css">
+</head>
+<body>
+  <div class="timer"><span>00:00</span></div>
+  <div class="container">
+    <div class="dot"></div>
+  </div>
+  <div class="info-table-container">
+    <ul class="info-table">
+      <li class="points-container">
+        <span>Points:</span>
+        <span id="points"></span>
+      </li>
+      <li class="level-container">
+        <span>Level:</span>
+        <span id="level">1</span>
+      </li>
+      <li class="playPause">
+        <button id="playBtn" data-time="false" data-pause="true">&RightTriangle;</button>
+        <button id="pauseBtn" data-time="false" class="none">&FilledSmallSquare;</button>
+      </li>
+    </ul>
+  </div>
+  <div class="contraReloj">
+    <div class="contraRelojOptions">
+      <span class="optionsPlus">+</span>
+      <span>⏱️</span>
+    </div>
+    <button id="easyMode" class="hidden">⏱️</button>
+    <button id="mediumMode" class="hidden">⏱️</button>
+    <button id="hardMode" class="hidden">⏱️</button>
+  </div>
+  <div class="none" id="animationBtn">
+    <span>▶️</span>
+  </div>
+  <script src="recursos/index.js"></script>
+</body>
+</html>

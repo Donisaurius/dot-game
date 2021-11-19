@@ -1,0 +1,232 @@
+:root{
+  --bg-color: #aca;
+  --border-color: #36c136;
+  --font-color: #222;
+  --game-bg: #eee;
+}
+
+body{
+  align-items: center;
+  background: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--game-bg);
+  border: 8px outset var(--border-color);
+  border-radius: 15px;
+  height: 40vh;
+  overflow: hidden;
+  width: 90%;
+}
+
+.info-table-container{
+  border: 6px outset var(--border-color);
+  border-radius: 15px;
+  color: var(--font-color);
+  height: 20vh;
+  width: 90%;
+}
+
+.info-table{
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  height: 100%;
+  width: 100%;
+}
+
+.info-table > li{
+  background: #ffbfa6;
+  border-radius: 10px;
+  color: brown;
+  font-family: cursive;
+  height: 2.5rem;
+  width: 5.5rem;
+}
+
+.level-container, .points-container{
+  padding: .7rem 0;
+  text-align: center;
+}
+
+.dot{
+  background: crimson;
+  border-radius: 50%;
+  height: 2rem;
+  transform: translate(0,0);
+  width: 2rem;
+  transition: transform .5s ease;
+}
+
+.none{
+  display: none;
+}
+
+button{
+  border-radius: 10px;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+}
+
+button[disabled]{
+  border: none;
+  box-shadow: 0px 0px 15px black;
+  opacity: 1;
+  filter: grayscale(1);
+}
+
+.timer{
+  border: 10px outset var(--border-color);
+  border-radius: 10px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 15vh;
+  font-family: monospace;
+  font-size: 2.5rem;
+  color: var(--font-color);
+  width: 90%;
+}
+
+#playBtn, #pauseBtn{
+  background: darksalmon;
+  border: 2px inset brown;
+  color: var(--font-color);
+  font-weight: bolder;
+  font-family: emoji;
+  font-size: larger;
+}
+
+.none{
+  display: none;
+}
+
+.modal{
+  align-items: center;
+  background: rgba(204, 204, 204, 0.5);
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  opacity: .8;
+  animation: animationBtn .8s 2 linear forwards;
+}
+
+.modal > span{
+  font-size: 6rem;
+}
+
+.contraReloj{
+  align-items: center;
+  cursor: pointer;
+  /* background: var(--game-bg); */
+  display: flex;
+  justify-content: space-evenly;
+  height: 2.5rem;
+  position: absolute;
+  width: 200px;
+  right: calc(50% - 175px);
+  bottom: 12rem;
+  transform: translateX(0);
+  transition: all .5s ease-out;
+}
+
+.contraReloj > button{
+  border-radius: 50%;
+  border: none;
+  height: 2rem;
+  /* margin-right: 10px; */
+  width: 2rem;
+  transition: opacity 1.5s ease;
+}
+
+.contraReloj button:nth-child(2){
+  background: #36c136;
+}
+.contraReloj button:nth-child(3){
+  background: #ffae00;
+}
+.contraReloj button:nth-child(4){
+  background: #ec6756;
+}
+
+.contraRelojOptions{
+  display: flex;
+  width: 2rem;
+  height: 2rem;
+  /* margin-right: 10px; */
+  align-items: center;
+  justify-content: center;
+}
+
+.optionsPlus{
+  color: green;
+  font-size: x-large;
+  font-family: fantasy;
+  font-weight: bolder;
+  left: 18px;
+  top: 2px;
+  position: absolute;
+  transition: all .5s ease-out;
+}
+
+.hidden{
+  opacity: 0;
+  visibility: hidden;
+}
+
+.visible{
+  opacity: 1;
+  visibility: visible;
+}
+
+.moveMenu{
+  background: rgba(105, 105, 105, 0.781);
+  border-radius: 20px;
+  transform: translateX(calc(50% - 175px));
+}
+
+.rotate{
+  transform: rotate(45deg);
+  color: #ec6756;
+}
+
+@keyframes animationBtn {
+  0%{
+    opacity: .2;
+  }
+
+  20%{
+    opacity: .8;
+  }
+
+  40%{
+    opacity: .2;
+  }
+
+  60%{
+    opacity: .2;
+  }
+
+  80%{
+    opacity: .8;
+  }
+
+  100%{
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+  }
+}
